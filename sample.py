@@ -1,9 +1,9 @@
 import ctypes
 import os
 
-_file = 'libsample.so'
+_file = '/home/angwei/recent/libsample.so'
 _path = os.path.join(*(os.path.split(__file__)[:-1] + (_file,)))
-# print(_path)
+print(_path)
 _mod = ctypes.cdll.LoadLibrary(_path)
 
 gcd = _mod.gcd
